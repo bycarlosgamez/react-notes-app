@@ -1,4 +1,5 @@
 import { ColumnContainer, ColumnTitle } from '../styles';
+import AddNewItem from './AddNewItem';
 import Card from './Card';
 
 type ColumnProps = {
@@ -12,6 +13,10 @@ const Column = ({ text }: ColumnProps) => {
       <Card text='Generate App' />
       <Card text='Learn Typescript' />
       <Card text='Use static typing' />
+      <AddNewItem
+        toogleButtonText='+ Add new card'
+        onAdd={() => console.log('Card created')}
+      />
     </ColumnContainer>
   );
 };

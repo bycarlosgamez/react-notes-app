@@ -34,3 +34,31 @@ export const CardContainer = styled.div`
   border-radius: 10px;
   box-shadow: #091e4240 opx 1px 0px 0px;
 `;
+
+type AddItemButtonProps = {
+  newCard?: boolean;
+};
+
+export const AddItemBotton = styled.button<AddItemButtonProps>`
+  background-color: #1a1a1a3d;
+  /* #ffffff3d */
+  border-radius: 10px;
+  border: 1px solid transparent;
+  color: ${(props) => (props.newCard ? '000' : '#FFF')};
+  cursor: pointer;
+  max-width: 300px;
+  width: 100%;
+  padding: 0.6em 1.2em;
+  text-align: left;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  transition: border-color 0.25s;
+  &:hover {
+    border-color: #646cff;
+  }
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+`;
